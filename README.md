@@ -16,8 +16,8 @@ Class that handles efficiencies:
 
 General useful functions:
   * ensure_dir(directory): checks if directory exists and if not creates it.
-  * print_bumper()>
+  * print_bumper(test, c='=',n=-1): prints text between lines of characters _c_. Number of _c_ characters can be altered by the _n_ argument. Automatically, `n=len(text)` _c_ characters are printed.
 
 ## Plotting
 
-Plot with pulls, plot correlations... Description given in sub-directory.
+Plotting scripts and utilities. Description given in sub-directory.
