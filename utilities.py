@@ -2,6 +2,23 @@
 Module containing small general helper functions
 '''
 
+def showUniques(df):
+	"""
+	Helper function that shows unique entries per DataFrame column.
+
+	Arguments:
+	df: the pandas DataFrame in question.
+	"""
+	
+	import pandas as pd
+	from pandas import DataFrame 
+
+    print("Number of rows: ", len(df))
+    print("Number of unique values per column: ")
+    for col in df.columns:
+        print("Column {}: ".format(col), df[col].nunique())
+
+
 def ensure_dir(directory):
 	"""When directory is not present, create it.
 
