@@ -21,3 +21,8 @@ General useful functions:
 ## Plotting
 
 Plotting scripts and utilities. Description given in sub-directory.
+
+# Installation
+
+* Get repository: git clone git@github.com:mschlupp/pythonTools.git
+* Add `pythonTools` directory to your `$PATH` variable: (e.g. Linux) in your `.bashrc` add `export PATH="/path/to/the/git/clone/pythonTools:$PATH"`

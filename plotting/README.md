@@ -6,6 +6,7 @@
 * Tableau10_Light
 * Tableau10_Medium
 * Tableau20
+* ColorBlind10
 
 ===
 ===
