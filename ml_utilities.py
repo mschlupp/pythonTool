@@ -2,7 +2,7 @@
 Contains useful machine learning functions.
 '''
 
-def optimisePars(mva, points, data , classes, fraction=0.7, score = 'log_loss', cvs=5):
+def optimisePars(mva, points, data , classes, fraction=0.7, **kwargs):
     '''
     Funtion to optimise hyper-parameters. Follows sklearn example:
     "example-model-selection-grid-search-digits-py"
@@ -13,9 +13,12 @@ def optimisePars(mva, points, data , classes, fraction=0.7, score = 'log_loss', 
     data - your training data
     classes - true categories/classes/labels 
     fraction - fraction of training/test split
-    score - score function to optimies the classifier
-    cvs - number of cross-validation folds or cross-validation generator
-    
+    **kwargs:
+    scoring - score function to optimise the classifier (eg 'log_loss')
+    cv - number of cross-validation folds or cross-validation generator
+    n_jobs - number of parallel jobs for grid-search
+    verbose - verbosity
+
     Returns:
     clf - GridSearchCV classifier.
 
@@ -30,8 +33,8 @@ def optimisePars(mva, points, data , classes, fraction=0.7, score = 'log_loss', 
     data, classes, test_size=fraction, random_state=0)
     s =  time.time()
     clf = GridSearchCV(mva, points, cv=cvs,
-                       scoring=score, n_jobs=4, 
-                       verbose=2)
+                       scoring=score, n_jobs=njobs, 
+                       verbose=vbs)
                        
     clf.fit(data_train, classes_train)
 
